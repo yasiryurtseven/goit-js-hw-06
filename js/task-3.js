@@ -2,7 +2,8 @@ class StringBuilder{
   #value;
 
   constructor(initialValue){
-    this.#value = [];
+    this.#value = "";
+    this.#value = initialValue;
   }
 
   getValue(){
@@ -10,15 +11,16 @@ class StringBuilder{
   }
 
   padEnd(str){
-    this.#value.push(str);
+    this.#value += str;
   }
 
   padStart(str){
-    this.#value.unshift(str);
+    this.#value = str + this.#value;
   }
 
   padBoth(str){
-    this.#value = this.#value = [str, ...arr, str]  }
+    this.#value = str + this.#value + str   
+  }
 
 
 }
